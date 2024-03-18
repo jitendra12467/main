@@ -2,33 +2,27 @@ group 'com.example.whatsapp_share'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext {
-        agp_version1 = '8.0.0'
-    }
-    ext.kotlin_version = '1.8.0'
     repositories {
         google()
-        mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:$agp_version1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:3.3.0'
     }
 }
 
-allprojects {
+rootProject.allprojects {
     repositories {
         google()
-        mavenCentral()
+        jcenter()
     }
 }
-
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 16
